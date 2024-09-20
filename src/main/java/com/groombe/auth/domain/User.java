@@ -25,10 +25,10 @@ public class User {
     private LocalDateTime createdAt;
 
     @Builder
-    public User(String username, String password, String type) {
+    public User(String username, String password, Role role) {
         this.username = username;
         this.password = password;
-        this.role = Role.valueOf(type);
+        this.role = Role.USER;
         this.createdAt = LocalDateTime.now();
     }
 
